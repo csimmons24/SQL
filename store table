@@ -1,0 +1,10 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, clothing TEXT, in_stock INTEGER, sold INTEGER, price INTEGER);
+
+INSERT INTO store VALUES (1, "t-shirts", 7, 5, 10.00);
+INSERT INTO store VALUES (2, "pants", 4, 3, 15.00);
+INSERT INTO store VALUES (3, "underwear", 12, 1, 8.00);
+INSERT INTO store VALUES (4, "shoes", 4, 3, 20.00);
+INSERT INTO store VALUES (5, "socks", 6, 2, 5.00);
+INSERT INTO STORE VALUES (6, "sweaters", 4, 1, 20.00);
+
+select * from store order by price asc;
