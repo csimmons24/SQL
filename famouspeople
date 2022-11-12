@@ -1,0 +1,22 @@
+CREATE TABLE actors (id INTEGER PRIMARY KEY, full_name TEXT, birth_year INTEGER);
+
+INSERT INTO actors VALUES (1, "Mel Gibson", 1956);
+INSERT INTO actors VALUES (2, "Lucy Liu", 1968);
+INSERT INTO actors VALUES (3, "Anne Hathaway", 1982);
+INSERT INTO actors VALUES (4, "Adrien Brody", 1973);
+INSERT INTO actors VALUES (5, "Ava Gardner", 1922);
+INSERT INTO actors VALUES (6, "Viola Davis", 1965);
+
+CREATE TABLE movies (id INTEGER PRIMARY KEY, name TEXT, released INTEGER, actor INTEGER);
+
+INSERT INTO movies VALUES (1, "Braveheart", 1995, 1);
+INSERT INTO movies VALUES (2, "Charlie's Angels", 2000, 2);
+INSERT INTO movies VALUES (3, "The Princess Diaries", 2001, 3);
+INSERT INTO movies VALUES (4, "The Pianist", 2002, 4);
+INSERT INTO movies VALUES (5, "The Barefoot Contessa", 1954, 5);
+INSERT INTO movies VALUES (6, "The Woman King", 2022, 6);
+INSERT INTO movies VALUES (7, "The Devil Wears Prada", 2006, 3);
+
+SELECT full_name, name FROM actors
+JOIN movies
+on actors.id = movies.actor;
